@@ -26,8 +26,8 @@ public class Client extends Thread {
     //int port = Integer.parseInt(args[1]);
     try {
       //Thread t = new Client("localhost", 5001);
-      Thread a = new Client("localhost", 65419);
-
+      //Thread a = new Client("localhost", 65419);
+      Thread a = new Client("localhost", 5003);
       a.start();
     } catch (IOException e) {
       e.printStackTrace();
@@ -43,6 +43,7 @@ public class Client extends Thread {
       DataOutputStream out = new DataOutputStream(socket.getOutputStream());
 
       while (true) {
+        System.out.print("You're now connected!");
         System.out.print("Enter response: ");
         String response = console.readLine();
         out.writeUTF(response);

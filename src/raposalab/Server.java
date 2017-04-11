@@ -40,8 +40,8 @@ public class Server extends Thread {
     //int port = Integer.parseInt(args[0]);
 
     try {
-      Thread t = new Server(5001);
-      
+      //Thread t = new Server(5001);
+      Thread t = new Server(5003);
       
       t.start();
     } catch (IOException e) {
